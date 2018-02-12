@@ -1,6 +1,8 @@
 package com.tmv.test;
 
 import java.io.IOException;
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.By;
@@ -19,37 +21,47 @@ import com.tmv.resusables.Resuables;
 import com.tmv.utilities.FileUtilities;
 
 public class SampleTMV extends Resuables implements ProductPage_OR {
-	
+
 	FileUtilities utility = new FileUtilities();
 
 	@Test
 	public void testTmv() throws InterruptedException, IOException {
-		
+
 		WebElement d = driver.findElement(By.xpath("//a[@data-nav-ref='nav_ya_signin']"));
 		Actions d1 = new Actions(driver);
 		d1.moveToElement(d).build().perform();
 		driver.findElement(By.className("nav-action-inner")).click();
-		WebDriverWait wait=new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(email)));
+		witforElement(email);
 		login(utility.getProperties("username"), utility.getProperties("password"));
-		Thread.sleep(2000);
-	driver.findElement(prodcutDropdown).click();
-	Select items = new Select(driver.findElement(prodcutDropdown));
-	items.selectByVisibleText("Cell Phones & Accessories");
-	driver.findElement(search).click();
-	Thread.sleep(3000);
-//	 JavascriptExecutor js = (JavascriptExecutor) driver;
-//	 js.executeScript("window.scrollBy(0,1000)");
-	 driver.findElement(TLink).click();
-	 Thread.sleep(2000);
-	 driver.findElement(Tlink1).click();
-//		String Errormsg = "Your password is incorrect";
-//		String Actualmsg = driver.findElement(errorMessage).getText();
-//		Assert.assertEquals(Errormsg, Actualmsg,"Error msg not displayed");
-//		signout();
+		Thread.sleep(6000);
+		driver.findElement(cart).click();
+		Thread.sleep(3000);
+		List<WebElement>product = driver.findElements(delete);
+		if(product.size()!=0) {
+		driver.findElement(delete).click();
+		}
 	
-		
+		//witforElement(prodcutDropdown);
+		//driver.findElement(prodcutDropdown).click();
+		Select items = new Select(driver.findElement(prodcutDropdown));
+		items.selectByVisibleText("Cell Phones & Accessories");
+		driver.findElement(search).click();
+		witforElement(TLink);
+		// JavascriptExecutor js = (JavascriptExecutor) driver;
+		// js.executeScript("window.scrollBy(0,1000)");
+		driver.findElement(TLink).click();
+		witforElement(Tlink1);
+		driver.findElement(Tlink1).click();
+		driver.findElement(AddToCart).click();
+		//witforElement(no_thanks);
+		Thread.sleep(5000);
+		driver.findElement(no_thanks).click();
+		driver.findElement(proceed).click();
+		// String Errormsg = "Your password is incorrect";
+		// String Actualmsg = driver.findElement(errorMessage).getText();
+		// Assert.assertEquals(Errormsg, Actualmsg,"Error msg not displayed");
+		// signout();
+
 	}
-	
-	
+
 }

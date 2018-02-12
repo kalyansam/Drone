@@ -17,6 +17,11 @@ By signout=By.linkText("Sign Out");
 By Search=By.xpath("//div[@class='nav-search-submit nav-sprite']");
 By TLink=By.partialLinkText("Samsung Galaxy S8/8 Plus");
 By Tlink1=By.partialLinkText("Samsung Galaxy S8 Unlocked 64GB ");
+By AddToCart= By.xpath("//div[@id='addToCart_feature_div']");
+By no_thanks = By.xpath("//button[@id='siNoCoverage-announce']");
+By proceed = By.id("hlb-ptc-btn-native");
+By cart = By.xpath("//span[@class='nav-cart-icon nav-sprite']");
+By delete = By.xpath("//div[@data-name='Active Items']//div/span[@class='a-size-small sc-action-delete']");
 
 }
 
