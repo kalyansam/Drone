@@ -20,7 +20,7 @@ import com.selenium.objectrepo.ProductPage_OR;
 import com.tmv.resusables.Resuables;
 import com.tmv.utilities.FileUtilities;
 
-public class SampleTMV extends Resuables implements ProductPage_OR {
+public class SampleTMVTest extends Resuables implements ProductPage_OR {
 
 	FileUtilities utility = new FileUtilities();
 
