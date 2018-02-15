@@ -16,6 +16,7 @@ import org.testng.Assert;
 //import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.ExtentReports;
 import com.selenium.objectrepo.ProductPage_OR;
 import com.tmv.resusables.Resuables;
 import com.tmv.utilities.FileUtilities;
@@ -26,7 +27,8 @@ public class SampleTMVTest extends Resuables implements ProductPage_OR {
 
 	@Test
 	public void testTmv() throws InterruptedException, IOException {
-
+        ExtentReports extent=new ExtentReports("C://Users//t160670//Downloads//TMV%20Details//TMV_Eclipse//Drone25//report.html", true);
+        extent.startTest("amazon");
 		WebElement d = driver.findElement(By.xpath("//a[@data-nav-ref='nav_ya_signin']"));
 		Actions d1 = new Actions(driver);
 		d1.moveToElement(d).build().perform();
@@ -61,6 +63,7 @@ public class SampleTMVTest extends Resuables implements ProductPage_OR {
 		// String Actualmsg = driver.findElement(errorMessage).getText();
 		// Assert.assertEquals(Errormsg, Actualmsg,"Error msg not displayed");
 		// signout();
+		extent.flush();
 
 	}
 

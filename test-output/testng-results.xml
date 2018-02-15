@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53202" started-at="2018-02-13T16:51:11Z" finished-at="2018-02-13T16:52:04Z">
+  <suite name="Default suite" duration-ms="55709" started-at="2018-02-15T02:17:50Z" finished-at="2018-02-15T02:18:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53202" started-at="2018-02-13T16:51:11Z" finished-at="2018-02-13T16:52:04Z">
-      <class name="com.tmv.test.SampleTMV">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.tmv.test.SampleTMV@4c70fda8]" name="setup" is-config="true" duration-ms="8272" started-at="2018-02-13T10:51:11Z" finished-at="2018-02-13T10:51:19Z">
+    <test name="Default test" duration-ms="55709" started-at="2018-02-15T02:17:50Z" finished-at="2018-02-15T02:18:45Z">
+      <class name="com.tmv.test.SampleTMVTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.tmv.test.SampleTMVTest@26653222]" name="setup" is-config="true" duration-ms="7409" started-at="2018-02-14T20:17:50Z" finished-at="2018-02-14T20:17:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testTmv()[pri:0, instance:com.tmv.test.SampleTMV@4c70fda8]" name="testTmv" duration-ms="43691" started-at="2018-02-13T10:51:19Z" finished-at="2018-02-13T10:52:03Z">
+        <test-method status="PASS" signature="testTmv()[pri:0, instance:com.tmv.test.SampleTMVTest@26653222]" name="testTmv" duration-ms="46394" started-at="2018-02-14T20:17:57Z" finished-at="2018-02-14T20:18:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTmv -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tmv.test.SampleTMV@4c70fda8]" name="tearDown" is-config="true" duration-ms="1193" started-at="2018-02-13T10:52:03Z" finished-at="2018-02-13T10:52:04Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tmv.test.SampleTMVTest@26653222]" name="tearDown" is-config="true" duration-ms="1854" started-at="2018-02-14T20:18:44Z" finished-at="2018-02-14T20:18:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tmv.test.SampleTMV -->
+      </class> <!-- com.tmv.test.SampleTMVTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
